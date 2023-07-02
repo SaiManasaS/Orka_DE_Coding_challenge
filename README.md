@@ -90,3 +90,11 @@ Take forward only the needed columns from the lake tables into another 'hub' sta
 3) Currently the data stored in the csv file is throwing a warning with regard to pandas deducing the schema automatically. This can be gracefully handled.
 4) Date formats across the data sources are inconsistent. This can be fixed to become consistent.
 
+## For AWS Glue
+1) AWS Glue Crawler was used to maintain Data catalog for both data sources: json and csv
+2) AWS Glue ETL (code available under AWS_Glue folder in this repo), was used to write json and csv data into parquet format.
+3) AWS Glue JDBC connection to SQLite is pending; plan was to create a connection and get SQLite table data into the Database as well.
+4) Use of Athena to run some analytics on the data from all above 3 data sources is pending.
+
+
+
